@@ -17,8 +17,8 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
-        run: dotnet restore MangaDexWrapper
+        run: dotnet restore src/MangaDexWrapper
       - name: Build
-        run: dotnet build MangaDexWrapper
+        run: dotnet build src/MangaDexWrapper
       - name: Test
-        run: dotnet test MangaDexWrapper.Test
+        run: dotnet test src/MangaDexWrapper.Test
